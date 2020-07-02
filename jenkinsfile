@@ -12,6 +12,7 @@ sh 'sudo yum install python-pip -y'
     stage('test') {
      dir('/var/lib/jenkins/worksapce/python_project/src/'){
      sh 'pwd'
+     sh 'ls'
         sh 'python app.py'
       }
 }}
