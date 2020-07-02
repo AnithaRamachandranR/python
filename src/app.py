@@ -5,14 +5,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    a=[]
     myfile=open('sample.json','r')
     readfile=myfile.read()
-    obj=json.loads(readfile)
-    print(obj)
-    for data in obj['channels']:
-	a.append(data['name'])
-    return a
+    return readfile
 
 
 if __name__ == "__main__":
