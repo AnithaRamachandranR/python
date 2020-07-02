@@ -9,7 +9,7 @@ def index():
     readfile=myfile.read()
     obj=json.loads(readfile)
     print(obj)
-    return "Hello, world!"+obj
+    return obj
 
 
 if __name__ == "__main__":
