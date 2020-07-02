@@ -8,5 +8,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='54.81.27.240', port=5000)
 
