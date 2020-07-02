@@ -1,3 +1,4 @@
+node{
 stage('SCM-CHECKOUT '){
      git 'https://github.com/AnithaRamachandranR/python'
      }
@@ -8,3 +9,4 @@ stage('build') {
     stage('test') {
         sh 'python app.py'
       }
+}
