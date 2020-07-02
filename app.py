@@ -9,4 +9,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='54.81.27.240',port='5000')
