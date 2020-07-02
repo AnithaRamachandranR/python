@@ -7,7 +7,7 @@ stage('build') {
 sh 'sudo yum install python-pip -y'
         sh 'sudo pip install -r requirements.txt'
     }
-    dir('/var/lib/jenkins/worksapce/python_project/src'){
+    dir('/var/lib/jenkins/worksapce/python_project/src/'){
     sh 'pwd'
     stage('test') {
         sh 'python app.py'
