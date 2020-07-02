@@ -1,13 +1,12 @@
-from flask import Flask
+from flask import Flask,render_template
 import json
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    myfile=open('sample.json','r')
-    readfile=myfile.read()
-    return readfile
+    return render_template('front.html')
+   
 
 
 if __name__ == "__main__":
