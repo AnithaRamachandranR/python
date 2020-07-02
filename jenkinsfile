@@ -8,6 +8,7 @@ sh 'sudo yum install python-pip -y'
         sh 'sudo pip install -r requirements.txt'
     }
     dir('/var/lib/jenkins/worksapce/python_pipeline/src'){
+    sh 'pwd'
     stage('test') {
         sh 'python app.py'
       }
