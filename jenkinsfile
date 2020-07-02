@@ -1,1 +1,4 @@
-
+stage('SCM-CHECKOUT '){
+     git 'https://github.com/AnithaRamachandranR/python'
+     }
+ 
