@@ -4,7 +4,7 @@ stage('SCM-CHECKOUT '){
      }
  
 stage('build') {
-sh 'sudo yum install python-pip'
+sh 'sudo yum install python-pip -y'
         sh 'pip install -r requirements.txt'
     }
     stage('test') {
