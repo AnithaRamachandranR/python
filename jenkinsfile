@@ -3,16 +3,16 @@ stage('SCM-CHECKOUT '){
      git 'https://github.com/AnithaRamachandranR/python'
      }
  
-//stage('build') {
-//sh 'sudo yum install python-pip -y'
-  //      sh 'sudo pip install -r requirements.txt'
-    //}
+stage('build') {
+sh 'sudo yum install python-pip -y'
+        sh 'sudo pip install -r requirements.txt'
+    }
     
     
     stage('test') {
-     dir('/var/lib/jenkins/workspace/python_project/'){
+     dir('/var/lib/jenkins/workspace/python_project/src'){
      sh 'pwd'
      sh 'ls'
-        sh 'python job.py'
+        sh 'python app.py'
       }
 }}
