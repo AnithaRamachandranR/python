@@ -10,7 +10,7 @@ stage('SCM-CHECKOUT '){
     
     
     stage('test') {
-     dir('/var/lib/jenkins/workspace/python_project/src/'){
+     dir('/var/lib/jenkins/workspace/python_project/'){
      sh 'pwd'
      sh 'ls'
         sh 'python job.py'
