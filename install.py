@@ -5,7 +5,7 @@ def fun(data):
     except ImportError:
         print ("Trying to Install required module: {}\n".format(data))
         os.system('python -m pip install {}'.format(data))
-f = open("file.py", "r")
+f = open("/home/ec2-user/file.py", "r")
 for i in f:
         if "from" in i and not i.startswith('#'):
             list_of_words =((i.split('from'))[1].split('import'))[0].strip()
