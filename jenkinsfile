@@ -7,7 +7,7 @@ stage('build') {
      dir('/var/lib/jenkins/workspace/python_project'){
      sh 'pwd'
      sh 'ls'
-        sh 'python install.py'
+        sh 'sudo python install.py'
         sh 'python app.py'
       }
 }}
