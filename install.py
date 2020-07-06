@@ -13,13 +13,13 @@ def fun(data):
         os.system('python -m pip install {}'.format(data))
 f = open("app.py", "r")
 for i in f:
-   if "from" in i:
+   if "from" in i and not i.startswith('#'):
          list_of_words = i.split('from')
          word = list_of_words[1].split('import')
          data=word[0].strip()
          print(data)
          fun(data)
-   elif "import" in i:
+   elif "import" in i and not i.startswith('#'):
     word= i.split('import')
     data=word[1].strip()
     print(data)
