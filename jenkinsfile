@@ -4,12 +4,6 @@ stage('SCM-CHECKOUT '){
      }
  
 stage('build') {
-//sh 'sudo yum install python-pip -y'
-  //      sh 'sudo pip install -r requirements.txt'
-    //}
-    
-    
-   // stage('test') {
      dir('/var/lib/jenkins/workspace/python_project'){
      sh 'pwd'
      sh 'ls'
