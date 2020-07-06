@@ -2,12 +2,20 @@ node{
 stage('SCM-CHECKOUT '){
      git 'https://github.com/AnithaRamachandranR/python'
      }
- 
-stage('build') {
-     dir('/var/lib/jenkins/workspace/python_project'){
-     sh 'pwd'
-     sh 'ls'
-        sh 'sudo python install.py'
-        sh 'python app.py'
-      }
+  stage('Deploy to airflow'){
+    sshagent(['tom']) {
+   sh 'whoami'
+    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/python_project/*.py  ec2-user@3.81.85.44:/home/ec2-user'
+    sh 'pwd'
+         sh " ssh ec2-user@3.81.85.44 'sudo python install.py'"
+           sh "ssh ec2-user@3.81.85.44 'python app.py'"
+      //  sh "ssh ec2-user@3.81.85.44 'airflow webserver -p 8080 & airflow scheduler && fg'"
+    }
+//stage('build') {
+  //   dir('/var/lib/jenkins/workspace/python_project'){
+    // sh 'pwd'
+    // sh 'ls'
+      //  sh 'sudo python install.py'
+       // sh 'python app.py'
+      //}
 }}
