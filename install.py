@@ -1,26 +1,17 @@
 import os
 def fun(data):
-    #print(data)
     try:
-        print(data)
-        __import__(data)
-        #importlib.import_module(data)
-        
-       # os.system('import {}'.format(data))
+            __import__(data)
     except ImportError:
         print ("Trying to Install required module: {}\n".format(data))
-        print('python -m pip install {}'.format(data))
         os.system('python -m pip install {}'.format(data))
-f = open("app.py", "r")
+f = open("file.py", "r")
 for i in f:
-   if "from" in i and not i.startswith('#'):
-         list_of_words = i.split('from')
-         word = list_of_words[1].split('import')
-         data=word[0].strip()
-         print(data)
-         fun(data)
-   elif "import" in i and not i.startswith('#'):
-    word= i.split('import')
-    data=word[1].strip()
-    print(data)
-    fun(data)
+        if "from" in i and not i.startswith('#'):
+            list_of_words =((i.split('from'))[1].split('import'))[0].strip()
+            print(list_of_words)
+            fun(list_of_words)
+        elif "import" in i and not i.startswith('#'):
+            word=(i.split('import'))[1].strip()
+            print(word)
+            fun(word)
