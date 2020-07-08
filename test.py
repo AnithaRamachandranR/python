@@ -3,8 +3,8 @@ import boto3
 import os
 import sys
 # coding=utf-8
-ACCESS_KEY = 'AKIAJEJD4WFA24VOBHYA'
-SECRET_KEY = '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'
+ACCESS_KEY = 
+SECRET_KEY = 
 s3 = boto3.client('s3', aws_access_key_id=ACCESS_KEY,aws_secret_access_key=SECRET_KEY)
 dir2=[]
 dir2= sys.argv[1:]
