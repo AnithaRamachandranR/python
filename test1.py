@@ -2,8 +2,8 @@ import boto3
 import os
 from os import listdir
 from os.path import isfile, join
-ACCESS_KEY = 'AKIAJEJD4WFA24VOBHYA'
-SECRET_KEY = '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'
+ACCESS_KEY = ''
+SECRET_KEY = ''
 s3 = boto3.client('s3', aws_access_key_id=ACCESS_KEY,aws_secret_access_key=SECRET_KEY)
 mypath="/home/ec2-user/anitha/"
 buck_obj=[]
